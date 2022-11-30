@@ -9,6 +9,9 @@
         MaxHeight="450" MaxWidth="450"
         MinHeight="550" MinWidth="550"
         WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/ResourceFolder/Frame 6(4).png"/>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
@@ -31,7 +34,7 @@
 
         </Grid.RowDefinitions>
         <Image Style="{DynamicResource LogoImage}"
-               Grid.Column="1" Grid.Row="1"/>
+               Grid.Column="1" Grid.Row="1" Source="/ResourceFolder/Иконка.png"/>
         <Label Content="Добавить пользователя" Grid.Row="1" Grid.Column="2"
                Style="{DynamicResource HeadingLabel}"/>
         <Label Content="Логин" Style="{DynamicResource OrdinaryLabel}"
@@ -51,10 +54,18 @@
 
 
         <Button x:Name="AddBtn" Content="Добавить"
-                Grid.Column="2" Grid.Row="9" Click="AddBtn_Click" 
-                />
+                Grid.Column="2" Grid.Row="9" Click="AddBtn_Click" FontSize="24" 
+                >
+            <Button.Background>
+                <ImageBrush ImageSource="/ResourceFolder/Frame 6(9).png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="BackBtn" Content="Назад" Grid.Column="1"
-                Grid.Row="9" Click="BackBtn_Click"  />
+                Grid.Row="9" Click="BackBtn_Click" FontSize="24"  >
+            <Button.Background>
+                <ImageBrush ImageSource="/ResourceFolder/Frame 6(8).png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace Stroitelstvo.WindowFolder.ManagerFolder
 {
     /// <summary>
-    /// Логика взаимодействия для AddManagerWindow.xaml
+    /// Логика взаимодействия для AddManagerClientWindow.xaml
     /// </summary>
-    public partial class AddManagerWindow : Window
+    public partial class AddManagerClientWindow : Window
     {
-        public AddManagerWindow()
+        public AddManagerClientWindow()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace Stroitelstvo.WindowFolder.ManagerFolder
         }
         private void AddUser()
         {
-            DBEntities.Getcontext().Staffs.Add(new Staff()
+            DBEntities.Getcontext().Clients.Add(new Client()
             {
                 LastName = LastName.Text,
                 FirstName = FirstName.Text,

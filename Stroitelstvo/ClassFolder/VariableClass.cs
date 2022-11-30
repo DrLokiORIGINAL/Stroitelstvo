@@ -10,5 +10,9 @@ namespace Stroitelstvo.ClassFolder
     {
         public static int UserId { get; set; }
         public static string IdRole { get; set; }
+        public static int IdStaff { get; set; }
+        public static int IdFlat { get; set; }
+        public static string IdStatus { get; set; }
+        public static int IdClient { get; set; }
     }
 }

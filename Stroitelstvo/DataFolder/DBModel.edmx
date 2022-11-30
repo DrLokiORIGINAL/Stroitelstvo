@@ -13,7 +13,6 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="MiddleName" Type="nvarchar" MaxLength="30" />
-          <Property Name="DateOfBrith" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="PhoneNumber" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Email" Type="nvarchar" MaxLength="30" Nullable="false" />
         </EntityType>
@@ -211,7 +210,6 @@
           <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="FirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MiddleName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="DateOfBrith" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Sales" Relationship="Self.FK_Sale_Client" FromRole="Client" ToRole="Sale" />
@@ -421,7 +419,6 @@
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
-                <ScalarProperty Name="DateOfBrith" ColumnName="DateOfBrith" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
               </MappingFragment>

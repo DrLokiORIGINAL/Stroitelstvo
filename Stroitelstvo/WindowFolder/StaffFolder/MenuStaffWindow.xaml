@@ -5,8 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stroitelstvo.WindowFolder.StaffFolder"
         mc:Ignorable="d"
-        Title="MenuStaffWindow" Height="450" Width="800">
+        Title="Окно сотрудника" Height="600" Width="900"
+        MaxHeight="600" MaxWidth="900"
+        MinHeight="600" MinWidth="900"
+        WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/ResourceFolder/Frame 6(4).png"/>
+    </Window.Background>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="160"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="59*"/>
+            <RowDefinition Height="155*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Image Style="{DynamicResource LogoImage}"
+               Grid.Column="1" Grid.Row="1" Source="/ResourceFolder/Иконка.png"/>
+        <Label Content="Меню Сотрудника"
+               Grid.Row="1" Grid.Column="2"
+               Style="{DynamicResource HeadingLabel}"/>
+        <Label Content="Поиск"
+               Grid.Row="3" Grid.Column="1"
+               Style="{DynamicResource OrdinaryLabel}"/>
+        <TextBox x:Name="SearchTb"
+                 Grid.Row="3"
+                 Grid.Column="2"
+                TextChanged="SearchTb_TextChanged"/>
+        <Menu Grid.Row="5"
+              Grid.Column="1"
+              Grid.ColumnSpan="2" Margin="10,20">
+            <MenuItem Header="Меню" >
+                <MenuItem x:Name="AddFlat" Header="Добавить заказ"
+                          Click="AddFlat_Click"/>
+                <MenuItem x:Name="EditFlat" Header="Редактирование заказа"
+                          Click="EditFlat_Click"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="StaffDG" IsReadOnly="True"
+                  AutoGenerateColumns="False" Grid.Column="1"
+                  Grid.ColumnSpan="2"
+                  Grid.Row="6" Grid.RowSpan="2"
+                  MouseDoubleClick="StaffDG_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="dgIcIdStaff"
+                                    Header="№ п/п"
+                                    Binding="{Binding IdFlat}"/>
+                <DataGridTextColumn x:Name="HouseNumber"
+                                    Header="Номер дома"
+                                    Width="*"
+                                    Binding="{Binding HouseNumber}"/>
+                <DataGridTextColumn x:Name="Number"
+                                    Header="Номер"
+                                    Width="*"
+                                    Binding="{Binding Number}"/>
+                <DataGridTextColumn x:Name="TotalArea"
+                                    Header="Общая площадь"
+                                    Width="*"
+                                    Binding="{Binding TotalArea}"/>
+                <DataGridTextColumn x:Name="LivingArea"
+                                    Header="Жилая площадь"
+                                    Width="*"
+                                    Binding="{Binding LivingArea}"/>
+                <DataGridTextColumn x:Name="NumberOfRooms"
+                                    Header="Номер квартиры"
+                                    Width="*"
+                                    Binding="{Binding NumberOfRooms}"/>
+                <DataGridTextColumn x:Name="Cost"
+                                    Header="Цена"
+                                    Width="*"
+                                    Binding="{Binding Cost}"/>
+                <DataGridTextColumn x:Name="IdStatus"
+                                    Header="Статус"
+                                    Width="*"
+                                    Binding="{Binding Status.StatusName}"/>
+                <DataGridTextColumn x:Name="IdJK"
+                                    Header="ЖК"
+                                    Width="*"
+                                    Binding="{Binding JK.Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

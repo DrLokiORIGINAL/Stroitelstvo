@@ -5,10 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stroitelstvo.WindowFolder.AdminFolder"
         mc:Ignorable="d"
-        Title="Окно Администратора" Height="450" Width="1000"
-        MaxHeight="450" MaxWidth="450"
-        MinHeight="1000" MinWidth="1000"
+        Title="Окно Администратора" Height="650" Width="1000"
+        MaxHeight="650" MaxWidth="1000"
+        MinHeight="650" MinWidth="1000"
         WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/ResourceFolder/Frame 6(4).png"/>
+    </Window.Background>
 
 
     <Grid>
@@ -30,7 +33,7 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
         <Image Style="{DynamicResource LogoImage}"
-               Grid.Column="1" Grid.Row="1"/>
+               Grid.Column="1" Grid.Row="1" Source="/ResourceFolder/Иконка.png"/>
         <Label Content="Меню Администратора"
                Grid.Row="1" Grid.Column="2"
                Style="{DynamicResource HeadingLabel}"/>
@@ -44,12 +47,10 @@
         <Menu Grid.Row="5"
               Grid.Column="1"
               Grid.ColumnSpan="2" Margin="10,20">
-            <MenuItem Header="Добавление" Click="MenuItem_Click" >
-                <MenuItem x:Name="AddUser" Header="Добавить пользователя"
+            <MenuItem Header="Меню" >
+                <MenuItem x:Name="AddUser" Header="Добавить заказ"
                           Click="AddUser_Click"/>
-            </MenuItem>
-            <MenuItem Header="Редактирование">
-                <MenuItem x:Name="EditUser" Header="Редактирование пользователя"
+                <MenuItem x:Name="EditUser" Header="Редактирование заказа"
                           Click="EditUser_Click"/>
             </MenuItem>
         </Menu>

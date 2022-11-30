@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Stroitelstvo.ClassFolder;
+using Stroitelstvo.DataFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,31 +13,29 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Stroitelstvo.ClassFolder;
-using Stroitelstvo.DataFolder;
 
 namespace Stroitelstvo.WindowFolder.ManagerFolder
 {
     /// <summary>
-    /// Логика взаимодействия для EditManagerWindow.xaml
+    /// Логика взаимодействия для EditManagerClientWindow.xaml
     /// </summary>
-    public partial class EditManagerWindow : Window
+    public partial class EditManagerClientWindow : Window
     {
-        public EditManagerWindow(Staff staff)
+        public EditManagerClientWindow(Client client)
         {
             InitializeComponent();
-            DataContext = staff;
+            DataContext = client;
         }
 
         private void EditBtn_Click(object sender, RoutedEventArgs e)
         {
-            Staff staff = DBEntities.Getcontext().Staffs.
-               FirstOrDefault(s => s.IdStaff == VariableClass.IdStaff);
-            staff.FirstName = FirstName.Text;
-            staff.LastName = LastName.Text;
-            staff.MiddleName = MiddleName.Text;
-            staff.PhoneNumber = NumberPhone.Text;
-            staff.Email = Email.Text;
+            Client client = DBEntities.Getcontext().Clients.
+               FirstOrDefault(s => s.IdClient == VariableClass.IdClient);
+            client.FirstName = FirstName.Text;
+            client.LastName = LastName.Text;
+            client.MiddleName = MiddleName.Text;
+            client.PhoneNumber = NumberPhone.Text;
+            client.Email = Email.Text;
             DBEntities.Getcontext().SaveChanges();
             MBClass.InformationMB("Сотрудник успешно отредактирован");
             new AdminFolder.MenuAdminWindow();

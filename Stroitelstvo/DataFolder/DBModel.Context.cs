@@ -20,13 +20,13 @@ namespace Stroitelstvo.DataFolder
             : base("name=DBEntities")
         {
         }
-        public static DBEntities Getcontext() 
+        public static DBEntities Getcontext()
         {
             if (context == null)
                 context = new DBEntities();
             return context;
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

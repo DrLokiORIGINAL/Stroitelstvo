@@ -124,14 +124,23 @@
     <Compile Include="WindowFolder\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowFolder\ManagerFolder\AddManagerClientWindow.xaml.cs">
+      <DependentUpon>AddManagerClientWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowFolder\ManagerFolder\AddManagerWindow.xaml.cs">
       <DependentUpon>AddManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowFolder\ManagerFolder\EditManagerClientWindow.xaml.cs">
+      <DependentUpon>EditManagerClientWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowFolder\ManagerFolder\EditManagerWindow.xaml.cs">
       <DependentUpon>EditManagerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowFolder\ManagerFolder\MenuManagerWindow.xaml.cs">
       <DependentUpon>MenuManagerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowFolder\ManagerFolder\MenuManagerClientWindow.xaml.cs">
+      <DependentUpon>MenuManagerClientWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowFolder\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
@@ -181,16 +190,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataFolder\DBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="DataFolder\DBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-      <LastGenOutput>DBModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="ResourceFolder\IconFolder\Bill-Gates.png" />
   </ItemGroup>
   <ItemGroup>
@@ -217,7 +216,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WindowFolder\ManagerFolder\AddManagerClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowFolder\ManagerFolder\AddManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowFolder\ManagerFolder\EditManagerClientWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,6 +233,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowFolder\ManagerFolder\MenuManagerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowFolder\ManagerFolder\MenuManagerClientWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -246,6 +257,23 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DataFolder\DBModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataFolder\DBModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBModel.edmx</DependentUpon>
+      <LastGenOutput>DBModel.cs</LastGenOutput>
+    </Content>
+    <Resource Include="ResourceFolder\Frame 6%289%29.png" />
+    <Resource Include="ResourceFolder\Frame 6%288%29.png" />
+    <Resource Include="ResourceFolder\Frame 6%284%29.png" />
+    <Resource Include="ResourceFolder\Frame 6%283%29.png" />
+    <Resource Include="ResourceFolder\Frame 6.png" />
+    <Resource Include="ResourceFolder\Иконка.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

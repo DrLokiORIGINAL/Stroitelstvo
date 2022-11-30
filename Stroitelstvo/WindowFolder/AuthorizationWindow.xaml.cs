@@ -61,10 +61,10 @@ namespace Stroitelstvo.WindowFolder
                         switch (user.IdRole)
                         {
                             case 3:
-                                new ManagerFolder.MenuManagerWindow().ShowDialog();
+                                new StaffFolder.MenuStaffWindow().ShowDialog();
                                 break;
                             case 2:
-                                new StaffFolder.MenuStaffWindow().ShowDialog();
+                                new ManagerFolder.MenuManagerWindow().ShowDialog();
                                 break;
                             case 1:
                                 new AdminFolder.MenuAdminWindow().ShowDialog();
